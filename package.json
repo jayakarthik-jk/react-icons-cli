@@ -1,0 +1,21 @@
+{
+  "name": "react-icons-cli",
+  "version": "1.0.0",
+  "description": "react-icons-cli",
+  "main": "index.js",
+  "scripts": {
+    "build": "esbuild ./src/index.ts --bundle --platform=node --target=node14 --outfile=./dist/react-icons-cli.js",
+    "start": "node ./dist/react-icons-cli.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@types/node": "^20.6.3",
+    "esbuild": "^0.19.3"
+  },
+  "dependencies": {
+    "@inquirer/core": "^5.0.0",
+    "react-icons": "^4.11.0"
+  }
+}

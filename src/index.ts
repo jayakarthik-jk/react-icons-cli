@@ -30,7 +30,9 @@ async function main() {
   const props = await parseIconProps(selectedPackage, selectedIcons);
   const svgs = props.map(genSvg);
   const components = svgs.map((svg, i) => genComponent(selectedIcons[i]!, svg));
-  components.map(updateComponent);
+  for (const component of components) {
+    await updateComponent(component);
+  }
   console.log("Done");
 }
 
